@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        main();
+
+        function main()
+        {
+            do{
+                var sideA = prompt("Enter the length of the first side of the triangle: ");
+            }while (isNaN(sideA));
+            do{
+                var sideB = prompt("Enter the length of the second side of the triangle: ");
+            }while (isNaN(sideB));
+            do{
+                var sideC = prompt("Enter the length of the third side of the triangle: ");
+            }while (isNaN(sideC));
+
+            var a = parseFloat(sideA);
+            var b = parseFloat(sideB);
+            var c = parseFloat(sideC);
+
+            determineTriangle(a,b,c);
+        }
+
+        function determineTriangle(a,b,c)
+        {
+            if (a===b && b===c)
+            {
+                window.alert("The triangle is EQUILATERAL.");
+            }
+            else if(a===b || b===c || c===a)
+            {
+                window.alert("The triangle is ISOSCELES.");
+            }
+            else
+            {
+                window.alert("The triangle is SCALENE.");
+            }
+        }
+
+    </script>
+</body>
+</html>
